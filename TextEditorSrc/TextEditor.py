@@ -3,7 +3,6 @@ from tkinter import *
 import pyautogui
 import os
 
-IsSaved = False
 window = Tk()
 window.geometry('950x650+550+275')
 window.title("Window...")
@@ -22,8 +21,6 @@ def writeToFile(content):
         textFile.write(content)
     with open("Text\lastFileRegistry.key", 'w') as registry:
         registry.write('Text/'+fileName+'.txt')
-    global RegistryExists
-    RegistryExists = True
 
 def retrieve_input():
     input = text_box.get("1.0",END)
